@@ -86,3 +86,67 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+var average;
+var analysis;
+var months = finances.length;
+var total = 0;
+var change = 0;
+var net = 0;
+var netArray = [];
+var netChangeSum = 0;
+var least = ['', 999999999999];
+var greatest = ['', 0];
+
+for (var i = 0; i < finances.length; i++) {
+  for (var j = 0; j < finances[i].length; j++) {
+
+    if (typeof finances[i][j] !== 'string') {
+      total += finances[i][j];
+      change = finances[i][j] - net;
+      net = finances[i][j];
+      netArray.push(change);
+
+      if (change > greatest[1]) {
+        greatest = [finances[i][0], finances[i][1]]
+      }
+
+      if (change < least[1]) {
+        least = [finances[i][0]], finances[i][1]
+      }
+      //   console.log(`total: ${total}`);
+      //   console.log(`change: ${change}`);
+      //   console.log(`net: ${net}`);
+      //   console.log(`netArray ${netArray}`);
+      // }
+    }
+  }
+}
+
+for (var i = 0; i < netArray.length; i++) {
+  netChangeSum += netArray[i];
+}
+
+average = Math.round((netChangeSum / 86) * 100) / 100;
+
+// analysis =
+//   'Financial Analysis' + '\n' +
+//   '-----------------------' + '\n' +
+//   'Total Months: ' + months + '\n' +
+//   'Total: $' + total + '\n' +
+//   'Average Change: ' + average + '\n' +
+//   'Greatest Increase in Profit: ' + greatest[0] + ': $' + greatest[1] + '\n' +
+//   'Greatest Decrease in Profit: ' + least[0] + ': $' + least[1] + '\n';
+
+// String Literal
+
+analysis =
+  `Financial Analysis
+-------------------
+Total Months: ${months}
+Total: $ ${total}
+Average Change: ${average}
+Greatest Increase in Profit: ${greatest[0]}: $${greatest[1]}
+Greatest Derease in Profit: ${least[0]}: $${least[1]}`
+
+console.log(analysis);
