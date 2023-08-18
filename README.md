@@ -23,10 +23,14 @@ The following analyses are performed on the dataset:
 
 
 ## Challenges and Learning Curve
-Calculating Average Change: Determining the correct formula for calculating the average change while considering the number of months was a significant challenge. 
-Research from MDN (Mozilla Developer Network) and guidance from my mentor Drew were instrumental in overcoming this challenge.
-String Concatenation: Combining strings and variables for generating the analysis report required understanding the concept of string concatenation in JavaScript, which was supported by resources from MDN.
-Precision Rounding: Achieving rounding to the nearest hundredth for the average change involved using appropriate JavaScript functions, with guidance from both MDN and my mentor.
+### Calculating Average Change: 
+• Determining the correct formula for calculating the average change while considering the number of months was a significant challenge. 
+### Research 
+• MDN (Mozilla Developer Network) and guidance from my mentor Drew were instrumental in overcoming this challenge.
+### String Concatenation: 
+• Combining strings and variables for generating the analysis report required understanding the concept of string concatenation in JavaScript, which was supported by resources from MDN.
+### Precision Rounding: 
+• Achieving rounding to the nearest hundredth for the average change involved using appropriate JavaScript functions, with guidance from both MDN and my mentor.
 
 
 ## Collaborative Efforts
