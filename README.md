@@ -50,6 +50,7 @@ https://github.com/Jeshikha/console-finances
 
 
 2. The URL of the functional, deployed application on GitHub Pages:
+https://jeshikha.github.io/console-finances/
 
 
 ## Screenshots of Deployed App
