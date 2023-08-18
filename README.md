@@ -57,5 +57,5 @@ https://jeshikha.github.io/console-finances/
 
 The following image shows the web application's console log and output through formula:
 
-![opening the code in the browser resulting analysis image](images/jsscreen.png)
+![opening the code in the browser resulting analysis image](images/jsscreen2.png)
 
