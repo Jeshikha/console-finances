@@ -152,7 +152,7 @@ average = Math.round((netChangeSum / (months - 1)) * 100) / 100;
 
 
 // Preparing analysis report
-// String concatenation to combine strings and variables in your analysis report
+// String concatenation to combine strings and variables in my analysis report
 analysis =
   'Financial Analysis' + '\n' +
   '-----------------------' + '\n' +
