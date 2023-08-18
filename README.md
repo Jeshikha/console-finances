@@ -1,16 +1,16 @@
-### Console Finances Analysis
+# Console Finances Analysis
 
 
 ## Overview
 Console Finances Analysis is a JavaScript project that I have created to analyse financial records and to calculate various metrics such as total profits/losses, average changes, and identifying the greatest increases and decreases in profits over a given period. This project focuses on applying fundamental JavaScript concepts to real-world scenarios. Through this project, I gained hands-on experience in working with arrays, loops, conditionals, and string manipulation. The challenges encountered during the project enhanced my problem-solving skills and deepened my understanding of JavaScript concepts.
 
 ## Tools Used
-VS Code HTML, JavaScript: Used to manipulate and analyze the provided financial dataset.
-Git and GitHub: Version control and collaboration platform for managing the project.
+* VS Code: Used to manipulate and analyse the provided financial dataset through JavaScript and HTML.
+* Git and GitHub: Version control and collaboration platform for managing the project.
 
 
 ## Project Details
-Dataset Analysis
+### Dataset Analysis
 The financial dataset consists of arrays with two fields: Date and Profit/Losses. 
 The following analyses are performed on the dataset:
 
@@ -33,7 +33,7 @@ Precision Rounding: Achieving rounding to the nearest hundredth for the average 
 I received valuable guidance and support from my mentor Drew and collaborated with my classmates, who shared insights and ideas during our discussions. This collaborative learning environment contributed significantly to the project's successful completion.
 
 ## Project Outcome
-The completed project successfully analyzes the financial dataset and provides insights into total months, net total, average change, and the greatest increases and decreases in profits/losses. The final analysis is displayed in the console and follows the specified format.
+The completed project successfully analyses the financial dataset and provides insights into total months, net total, average change, and the greatest increases and decreases in profits/losses. The final analysis is displayed in the console and follows the specified format.
 
 ## License
 
