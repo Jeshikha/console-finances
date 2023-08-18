@@ -1,4 +1,4 @@
-// Given financial data
+// Given financial data - starter code
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -104,7 +104,7 @@ var greatest = ['', 0]; // Initialising greatest to a low value
 // Loop through each financial record
 
 // 'i' represents each financial record or row in the dataset
-// 'j' epresents the elements within each financial record (i.e., the date and profit/loss value).
+// 'j' represents the elements within each financial record (i.e., the date and profit/loss value).
 for (var i = 0; i < finances.length; i++) {
   for (var j = 0; j < finances[i].length; j++) {
     // Checking if the value is not a string (assuming numbers are the Profit/Losses)
@@ -138,14 +138,21 @@ for (var i = 0; i < netArray.length; i++) {
 
 // Calculating average change
 average = Math.round((netChangeSum / (months - 1)) * 100) / 100;
+// This line calculates the average change and then divides by 100 to round to the nearest 100th.
 // The reason for using (months - 1) in the denominator is that 
 // I am calculating the average change based on the changes between months. 
 // If I have 'n' months in the future, there are n - 1 changes between them. 
 // So, (months - 1) provides the correct denominator for the average calculation. 
 // This approach is more flexible and accurate if the number of months changes in different datasets.
 
+// or
+
+// another formula // To calculate the average change and round to the nearest hundredth
+// average = (netChangeSum / (months - 1)).toFixed(2);
+
 
 // Preparing analysis report
+// String concatenation to combine strings and variables in your analysis report
 analysis =
   'Financial Analysis' + '\n' +
   '-----------------------' + '\n' +
@@ -155,7 +162,7 @@ analysis =
   'Greatest Increase in Profits/ Losses: ' + greatest[0] + ' ($' + greatest[1] + ')' + '\n' +
   'Greatest Decrease in Profits/ Losses: ' + least[0] + ' ($' + least[1] + ')' + '\n';
 
-// String Literal as suggested
+// Alternate simplified string literal as suggested by mentor
 
 // analysis =
 //   `Financial Analysis
