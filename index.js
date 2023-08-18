@@ -121,6 +121,10 @@ for (var i = 0; i < finances.length; i++) {
     least = [finances[i][0], change]; // Updating least array
   }
 }
+//   console.log(`total: ${total}`);
+//   console.log(`change: ${change}`);
+//   console.log(`net: ${net}`);
+//   console.log(`netArray ${netArray}`);
 
 // Calculating net change sum for calculating average
 for (var i = 0; i < netArray.length; i++) {
@@ -167,8 +171,5 @@ analysis =
 console.log(analysis);
 
 
-//   console.log(`total: ${total}`);
-//   console.log(`change: ${change}`);
-//   console.log(`net: ${net}`);
-//   console.log(`netArray ${netArray}`);
+
 
