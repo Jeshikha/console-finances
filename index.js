@@ -1,3 +1,4 @@
+// Given financial data
 var finances = [
   ['Jan-2010', 867884],
   ['Feb-2010', 984655],
@@ -87,6 +88,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+// Declaring variables for analysis
 var average;
 var analysis;
 var months = finances.length;
@@ -95,24 +97,30 @@ var change = 0;
 var net = 0;
 var netArray = [];
 var netChangeSum = 0;
-var least = ['', 999999999999];
-var greatest = ['', 0];
+var least = ['', 999999999999]; // Initialising least to a high value
+var greatest = ['', 0]; // Initialising greatest to a low value
 
+
+// Loop through each financial record
+
+// 'i' represents each financial record or row in the dataset
+// 'j' epresents the elements within each financial record (i.e., the date and profit/loss value).
 for (var i = 0; i < finances.length; i++) {
   for (var j = 0; j < finances[i].length; j++) {
-
+    // Checking if the value is not a string (assuming numbers are the Profit/Losses)
     if (typeof finances[i][j] !== 'string') {
-      total += finances[i][j];
-      change = finances[i][j] - net;
-      net = finances[i][j];
-      netArray.push(change);
+      total += finances[i][j]; // Calculating total profit/loss
+      change = finances[i][j] - net; // Calculating change from previous month
+      net = finances[i][j]; // Updating net to current month's profit/loss
+      netArray.push(change); // Storing changes for calculating average
 
+      // Finding greatest increase in profit/loss
       if (change > greatest[1]) {
-        greatest = [finances[i][0], finances[i][1]]
+        greatest = [finances[i][0], finances[i][1]] // Updating greatest array
       }
-
+      // Finding greatest decrease in profit/loss
       if (change < least[1]) {
-        least = [finances[i][0]], finances[i][1]
+        least = [finances[i][0], finances[i][1]]; // Updating least array
       }
       //   console.log(`total: ${total}`);
       //   console.log(`change: ${change}`);
@@ -123,30 +131,41 @@ for (var i = 0; i < finances.length; i++) {
   }
 }
 
+// Calculating net change sum for calculating average
 for (var i = 0; i < netArray.length; i++) {
   netChangeSum += netArray[i];
 }
 
-average = Math.round((netChangeSum / 86) * 100) / 100;
+// Calculating average change
+average = Math.round((netChangeSum / (months - 1)) * 100) / 100;
+// The reason for using (months - 1) in the denominator is that 
+// I am calculating the average change based on the changes between months. 
+// If I have 'n' months in the future, there are n - 1 changes between them. 
+// So, (months - 1) provides the correct denominator for the average calculation. 
+// This approach is more flexible and accurate if the number of months changes in different datasets.
+
+
+// Preparing analysis report
+analysis =
+  'Financial Analysis' + '\n' +
+  '-----------------------' + '\n' +
+  'Total Months: ' + months + '\n' +
+  'Total: $' + total + '\n' +
+  'Average Change: ' + average + '\n' +
+  'Greatest Increase in Profits/ Losses: ' + greatest[0] + ' ($' + greatest[1] + ')' + '\n' +
+  'Greatest Decrease in Profits/ Losses: ' + least[0] + ' ($' + least[1] + ')' + '\n';
+
+// String Literal as suggested
 
 // analysis =
-//   'Financial Analysis' + '\n' +
-//   '-----------------------' + '\n' +
-//   'Total Months: ' + months + '\n' +
-//   'Total: $' + total + '\n' +
-//   'Average Change: ' + average + '\n' +
-//   'Greatest Increase in Profit: ' + greatest[0] + ': $' + greatest[1] + '\n' +
-//   'Greatest Decrease in Profit: ' + least[0] + ': $' + least[1] + '\n';
+//   `Financial Analysis
+// -------------------
+// Total Months: ${months}
+// Total: $ ${total}
+// Average Change: ${average}
+// Greatest Increase in Profit: ${greatest[0]}: $${greatest[1]}
+// Greatest Derease in Profit: ${least[0]}: $${least[1]}`
 
-// String Literal
 
-analysis =
-  `Financial Analysis
--------------------
-Total Months: ${months}
-Total: $ ${total}
-Average Change: ${average}
-Greatest Increase in Profit: ${greatest[0]}: $${greatest[1]}
-Greatest Derease in Profit: ${least[0]}: $${least[1]}`
-
+// Displaying analysis report in console
 console.log(analysis);
